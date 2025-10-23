@@ -28,11 +28,6 @@
       display:grid;grid-template-columns:1fr 220px;gap:1.25rem;align-items:center;
     }
 
-    .logo{
-      max-width:160px;
-      margin-bottom:1.5rem;
-    }
-
     .left h1{margin:0;font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:-0.5px}
     .left p{margin:0.6rem 0 1.1rem;color:rgba(236,254,255,0.87);line-height:1.4}
 
@@ -47,14 +42,18 @@
     .btn.primary{background:linear-gradient(90deg,var(--accent),#fb923c);box-shadow:0 6px 20px rgba(249,115,22,0.18);border:none;color:#071029}
 
     .right{display:flex;flex-direction:column;align-items:center;gap:0.9rem}
-    .circle{
-      width:120px;height:120px;border-radius:50%;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;padding:12px;border:1px solid rgba(255,255,255,0.04)
+    .logo{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      display:flex;align-items:center;justify-content:center;
+      padding:12px;border:1px solid rgba(255,255,255,0.04);
     }
 
-    .gear{width:64px;height:64px;filter:drop-shadow(0 6px 18px rgba(15,23,42,0.6));}
-
-    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-    .gear.spin{animation:spin 6s linear infinite}
+    .logo img{
+      width:120px;height:120px;object-fit:contain;
+    }
 
     .bg-animated{position:fixed;inset:0;z-index:-1;opacity:0.08;background:conic-gradient(from 180deg at 50% 50%, #4f46e5, #06b6d4, #10b981, #f97316, #4f46e5);filter:blur(60px);transform:scale(1.2);mix-blend-mode:screen}
 
@@ -71,7 +70,6 @@
 
   <main class="card" role="main" aria-labelledby="title">
     <section class="left">
-      <img src="Logo.png" alt="ChatEmbedAI Logo" class="logo" />
       <div class="tag">Under Construction</div>
       <h1 id="title">We&rsquo;re building something awesome</h1>
       <p>Thanks for stopping by — our site is getting a refresh. We&rsquo;re working hard to bring you a faster, better experience. Check back soon!</p>
@@ -84,17 +82,8 @@
     </section>
 
     <aside class="right" aria-hidden="false">
-      <div class="circle" title="Construction">
-        <svg class="gear spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="1.2">
-          <defs>
-            <linearGradient id="g" x1="0%" x2="100%">
-              <stop offset="0%" stop-color="#fff" stop-opacity="0.92"/>
-              <stop offset="100%" stop-color="#ffd1a3" stop-opacity="0.95"/>
-            </linearGradient>
-          </defs>
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09c0-.59-.36-1.13-.92-1.41a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06c.5-.5.6-1.24.33-1.82A1.65 1.65 0 003 13.6H3a2 2 0 011.99-2.24H5c.59 0 1.13-.36 1.41-.92a1.65 1.65 0 00-.33-1.82L6.03 6.63a2 2 0 112.83-2.83l.06.06c.5.5 1.24.6 1.82.33.58-.27 1.3-.18 1.82.33l.06.06A1.65 1.65 0 0011 6.3V6a2 2 0 114 0v.09c0 .59.36 1.13.92 1.41.59.3 1.3.21 1.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06c-.27.58-.18 1.3.33 1.82z" />
-        </svg>
+      <div class="logo" title="ChatEmbedAI Logo">
+        <img src="Logo.png" alt="ChatEmbedAI Logo" />
       </div>
 
       <div style="text-align:center">
